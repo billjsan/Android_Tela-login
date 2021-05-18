@@ -2,6 +2,7 @@ package com.example.loginform;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
             if(username.equals("user") && password.equals("pass")){
 
                 Toast.makeText(MainActivity.this, "Login válido", Toast.LENGTH_LONG).show();
+
+                Intent changeActivity = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(changeActivity);
             }
             else{
                 Toast.makeText(MainActivity.this, "Login inválido", Toast.LENGTH_SHORT).show();
